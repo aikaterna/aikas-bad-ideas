@@ -59,8 +59,8 @@ class MessageHelp(commands.Cog):
     async def settings(self, ctx):
         """Show the help settings."""
         global_config = await self.config.all()
-        msg = "[ Custom Help Settings ]\n"
+        msg = "[ Custom Help Settings ]\n\n"
         msg += f"Message:     {global_config['message']}\n"
-        msg += f"Custom Help: {'Disabled' if global_config['old_help'] else 'Enabled' }"
+        msg += f"Custom Help: {'Disabled' if global_config['old_help'] else 'Enabled'}"
         for page in pagify(msg):
             await ctx.send(box(page, lang="ini"))
