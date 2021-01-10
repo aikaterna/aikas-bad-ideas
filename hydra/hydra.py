@@ -106,9 +106,12 @@ class Hydra(commands.Cog):
                 async for msg in channel_obj.history(limit=1):
                     ctx = await self.bot.get_context(msg)
                     if len(msg.embeds) > 0:
-                        if msg.embeds[0].title.startswith("Queue for "):
-                            await cleanup_cog.messages(ctx=ctx, number=1)
-                            await audio_cog.command_queue(ctx=ctx)
+                        try:
+                            if msg.embeds[0].title.startswith("Queue for "):
+                                await cleanup_cog.messages(ctx=ctx, number=1)
+                                await audio_cog.command_queue(ctx=ctx)
+                        except AttributeError:
+                            pass
 
     async def _setup(self, channel):
         img_header = "https://cdn.discordapp.com/attachments/376048873929572352/795904443035287602/cat_meows_at.png"
