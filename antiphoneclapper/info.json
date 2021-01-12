@@ -1,8 +1,8 @@
 {
 	"author": ["sitryk", "aikaterna"],
 	"description": "Deletes messages with malformed GIFs and MP4s, links or attachments. This is a different version than the one on my approved repo. Use at your own risk.",
-    "install_msg": "You MUST have ffplay in your Scripts folder if Red is in a venv for this to work on Windows. This cog downloads videos that users post, plays the video back, and looks for malformed data. This can take a long time in some cases (videos with a duration over 20 seconds) and may cause bot heartbeats. Not tested on Linux or Mac.",
-    "permissions" : ["manage_messages"],
+	"install_msg": "You MUST have ffplay in your Scripts folder if Red is in a venv for this to work on Windows. This cog downloads videos that users post, plays the video back, and looks for malformed data. This can take a long time in some cases (videos with a duration over 20 seconds) and may cause bot heartbeats. Not tested on Linux or Mac.",
+	"permissions" : ["manage_messages"],
 	"requirements": ["pillow"],
 	"short": "Deletes messages with malformed GIFs or MP4s.",
 	"type": "COG",
