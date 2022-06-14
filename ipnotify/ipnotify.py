@@ -30,7 +30,7 @@ class IPNotify(commands.Cog):
                     if ip_match:
                         return await ctx.send(f"My IP address is: {ip_match.group(0)}")
                     else:
-                        return await ctx.send("I can't find my ip address...")
+                        return await ctx.send("I can't find my IP address...")
 
         except aiohttp.ClientConnectionError:
-            return await ctx.send("Looks like there was a connection error when I tried to do that.")
+            return await ctx.send("Looks like there was a connection error when I tried to fetch my IP address.")
